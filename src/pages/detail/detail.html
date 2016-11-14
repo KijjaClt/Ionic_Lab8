@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar color="brown">
+    <ion-title>Detail</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <ion-card-title>
+        <img src="http://f.ptcdn.info/624/019/000/1401631206-main-o.png" style="object-fit: cover; border-radius:50%; width: 150px; height: 150px; margin:auto;"
+    />
+      </ion-card-title>
+      <ion-item>
+          <h2>
+            <ion-icon name="person"></ion-icon> Name</h2>
+          <p>{{todo.fname}} {{todo.lname}}</p>
+        </ion-item>
+        <ion-item>
+          <h2>
+            <ion-icon name="call"></ion-icon> Phone</h2>
+          <p>{{todo.tel}}</p>
+        </ion-item>
+        <ion-item>
+          <h2>
+            <ion-icon name="book"></ion-icon> Memo</h2>
+          <p>{{todo.memo}}</p>
+        </ion-item>
+    </ion-card-content>
+    <button ion-button full (click)="call()">Call</button>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Contact
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item-sliding *ngFor="let todo of list; let i = index;">
+      <ion-item detail-push (click)="goNextPage(todo)">
+        <span item-left><img [src]="image" width="48" height="48"/></span>
+        <h2>{{todo.fname}}  {{todo.lname}}</h2>
+        <p>{{todo.tel}}</p>
+      </ion-item>
+      <ion-item-options side="right">
+        <button ion-button color="danger" (click)="remove(todo.id)">
+          <ion-icon name="trash"></ion-icon>
+          Delete
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+  <ion-fab right bottom>
+    <button ion-fab (click)="addTodo()"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+</ion-content>
